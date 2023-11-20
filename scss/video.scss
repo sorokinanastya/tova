@@ -1,0 +1,68 @@
+.video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &::after {
+    content: url(../img/leafs-bg.png);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__wrapper {
+    padding-top: 2.75rem; 
+
+    &-name {
+      font-size: 1.625rem; 
+      padding-top: 3rem; 
+      font-weight: 400;
+    }
+
+    &-btn {
+      position: absolute;
+      bottom: 3.875rem;
+      left: 50%;
+      img {
+        display: flex;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 28.125rem) {
+  .video {
+    &__wrapper {
+
+      &-name {
+        font-size: 0.875rem; 
+        margin-bottom: 15.625rem; 
+      }
+
+      &-btn {
+        z-index: 2;
+      
+        display: flex;
+        left: 45%;
+        margin: 0 auto;
+        bottom: 6.25rem;
+        img {
+            padding-top: 0;
+            height: 0.813rem; 
+            width: 1.625rem;
+        }
+      }
+    }
+
+    &::after {
+        left: 35%;
+        right: 14.625rem; 
+    }
+  }
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+  .video {
+    height: auto;
+  }
+}

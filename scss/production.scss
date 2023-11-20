@@ -1,0 +1,302 @@
+.production {
+  // padding-bottom: 15.75rem;
+  position: relative;
+  // height: 100vh;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url(../img/leaf-top.png);
+    width: 15.06rem;
+    height: 8.91rem;
+    background-size: cover;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content:  url(../img/leaf-bottom.png);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__items {
+    position: relative;
+    padding-top: 4.375vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.125rem;
+    column-gap: 6.25rem;
+    font-weight: 400;
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      background-image: url(../img/chevron-brown.png);
+      width: 4.125rem;
+      height: 4.125rem;
+      top: 8%;
+      margin-left: 13.125rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 2.75vw;
+
+    &-img {
+      margin-bottom: 1.25rem;
+      position: relative;
+    }
+
+    &-list li {
+      list-style: disc;
+      margin-bottom: 0.75rem;
+    }
+
+    &-step {
+      background: linear-gradient(180deg, #cec9c5 0%, #948982 96.46%);
+      font-size: 1.125rem;
+      padding: 0.5625rem 1.0625rem;
+      position: relative;
+      border-radius: 0.4375rem;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 45vw;
+  }
+}
+
+#button-right,
+#button-left {
+  display: none;
+}
+
+.step__wrapper:first-child {
+  margin-bottom: 5.875rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/chevron-steps.png);
+    width: 4.125rem;
+    height: 4.125rem;
+    left: 6.5625rem;
+    top: 6.5625rem;
+  }
+}
+
+@media (max-width: 1460px) {
+  .production__img {
+    width: 60%;
+  }
+
+  .step__wrapper:first-child {
+    &::after {
+      left: 4.0625rem;
+      top: 5.5625rem;
+    }
+  }
+
+  .production__item-img {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .production__items {
+    font-size: 1.2vw;
+    padding-top: 2.375vh;
+  }
+
+  .production__item-step {
+    font-size: 1rem;
+  }
+
+  .production__title {
+    padding-top: 1rem;
+  }
+
+  .production__wrapper::after {
+    top: 2%;
+  }
+}
+
+@media (max-width: 1180px) {
+  .production__items {
+    padding-top: 1.375rem;
+    column-gap: 2.25rem;
+  }
+}
+
+@media (max-width: 1140px) {
+  .production__wrapper::after {
+    margin-left: 9.375rem;
+  }
+
+  .production__item-img {
+    width: 4.375rem;
+    height: 4.375rem;
+  }
+
+  .production__items {
+    font-size: 1.2vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .production {
+    padding-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url(../img/body-top-mobile.png);
+      width: 6.8125rem;
+      height: 10.625rem;
+      top: 0;
+      left: auto;
+      right: 0;
+    }
+
+    &__title {
+      padding-top: 0;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding-top: 4.5625vh;
+    }
+
+    &__wrapper {
+      margin-bottom: 3.188rem;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-image: url(../img/chevron-down-brown.png);
+        width: 3.8125vh;
+        height: 2.75vh;
+        background-size: cover;
+        top: auto;
+        margin-left: 12rem;
+      }
+    }
+
+    #button-right {
+      display: block;
+    }
+
+    &__item {
+      display: flex;
+      font-size: 0.875rem;
+      margin-bottom: 0;
+
+      &-img {
+        width: 6.09375vh;
+        height: 6.09375vh;
+        margin-bottom: 0;
+      }
+
+      &-text {
+        padding-left: 0.5rem;
+      }
+
+      ul {
+        margin-left: 1.25rem;
+      }
+
+      ul li {
+        margin-bottom: 0.3125rem;
+      }
+
+      &-steps {
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease;
+        padding-top: 1.25vh;
+        margin-bottom: 1vh;
+      }
+
+      &-step {
+        font-size: 1.47vh;
+        padding: 0.5625rem 0.75rem;
+        width: 34.25vh;
+        height: 9.75vh;
+
+        &:first-child::after {
+          display: none;
+        }
+
+      }
+    }
+  }
+
+  .step__wrapper {
+    margin-right: 0.625rem;
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      margin-right: 0.625rem;
+      display: block;
+    }
+
+    &:first-child::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 671px) {
+  #button-left {
+    display: block;
+  }
+}
+
+@media (max-width: 440px) {
+  .production {
+    &__item {
+      &-text {
+        margin-bottom: 0.813vh;
+      }
+    }
+  }
+
+  .production__item-steps.process__active {
+    transform: translateX(-50%);
+  }
+}
+
+#button-right,
+#button-left {
+  cursor: pointer;
+}
+
+@media (max-width: 380px) {
+  .production__item {
+    font-size: 1.967vh;
+  }
+}

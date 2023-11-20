@@ -1,0 +1,74 @@
+.hair-product {
+
+  &--wrapper {
+    display: flex;
+    padding-top: 2.3125rem;
+    align-items: flex-start;
+  }
+
+  &--img {
+    max-width: 100%;
+    height: 70vh;
+  }
+}
+
+@media (max-width: 1465px) {
+ 
+  .hair-product--info {
+    width: 50%;
+  }
+}
+@media(max-width:1260px) {
+  .hair-product--img {
+    height: 60vh;
+  }
+}
+@media(max-width:1080px) {
+  .hair-product--img {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 780px) {
+  .hair-product {
+    &--wrapper {
+      flex-direction: column-reverse;
+      padding-top: 1.875rem;
+      align-items: center;
+    }
+
+    &--img {
+      width: auto;
+      margin-top: 1rem;
+      padding-bottom: 3vh;
+      height: 40vh;
+    }
+
+    &--info {
+      width: 100%;
+    }
+  }
+}
+
+
+
+@media (max-width: 724px) {
+  .item--wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.item--wrapper {
+  position: relative;
+  // height: 100vh;
+  overflow: hidden;
+}
+
+@media only screen 
+    and (width: 375px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+      .hair-product--img {
+        height: 30vh;
+      }
+    }

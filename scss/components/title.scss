@@ -1,0 +1,68 @@
+.title__wrapper, .hair-product--title {
+
+
+    span {
+        font-size: 1.375rem;
+        color: #bdbdbd;
+        margin-bottom: 0.938rem;
+    }
+
+    h2 {
+        font-size: 3.6vh;
+        font-weight: 600;
+    }
+}
+.hair-product--title {
+    padding-top: 3rem;
+}
+@media (max-width: 1366px) {
+    .title__wrapper {
+        padding-top: 2rem;
+    }
+}
+@media (max-width: 730px) {
+    .title__wrapper {
+        padding-top: 4.5rem; 
+        position: relative;
+        h2 {
+            font-size: 1.5rem; 
+        }
+    }
+    .title__empty {
+        padding-top: 2rem;
+    }
+    .hair-product--title {
+        padding-top: 6rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .title__wrapper {
+        padding-top: 4rem;
+    }
+    .title__wrapper span {
+        font-size: 1rem;
+    }
+    .title__wrapper h2 {
+        font-size: 1.2rem;
+    }
+    .body__product-title {
+        padding-top: 8.5rem;
+    }
+}
+
+@media only screen 
+    and (width: 375px) 
+    and (-webkit-device-pixel-ratio: 2) {
+        .body__product-title {
+            padding-top: 5.5rem;
+        }
+     }
+
+     @media only screen 
+    and (width: 390px) 
+    and (-webkit-device-pixel-ratio: 3) {
+      .title__wrapper {
+        padding-top: 5.5rem;
+      }
+     }

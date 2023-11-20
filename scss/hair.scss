@@ -1,0 +1,143 @@
+@mixin aspect-ratio($width, $height) {
+  position: absolute;
+  bottom: 0;
+
+  height: 50vh;
+  img {
+    position: absolute;
+
+    height: 100%;
+    object-fit: fill;
+    display: block;
+  }
+}
+.hair {
+  color: #000;
+  position: relative;
+  // height: 100vh;
+  overflow: hidden;
+  &__wrapper {
+    display: flex;
+    position: relative;
+    padding-top: 2.875rem;
+
+    &-img {
+      max-width: 100%;
+      padding-bottom: 3vh;
+      width: 100vw;
+
+      object-fit: cover;
+      &--mobile {
+        display: none;
+      }
+    }
+    &-text {
+      max-width: 22.5625vw;
+      padding-top: 15vh;
+      font-size: 1.375vw;
+
+      &--mobile {
+        display: none;
+      }
+    }
+    &-text:nth-child(1) {
+      position: absolute;
+      left: 0;
+    }
+    &-text:nth-child(3) {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 1435px) {
+  .hair {
+    &__wrapper {
+      padding-top: 0;
+      &-text:nth-child(3) {
+        position: absolute;
+        right: 0%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hair {
+    &__wrapper {
+      &-text {
+        font-size: 2vw;
+      }
+    }
+  }
+}
+
+@media (max-width: 844px) and (orientation: landscape) {
+  .hair {
+    &__wrapper {
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 725px) {
+  .hair {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1.875rem;
+      height: auto;
+      &-text {
+        max-width: none;
+        font-size: 0.875rem;
+        margin-bottom: 0.9375rem;
+        padding-top: 0;
+        &--mobile {
+          display: block;
+          font-size: 0.875rem;
+          padding-left: 1.375rem;
+          margin-bottom: 0.9375rem;
+
+          li {
+            list-style: disc;
+            margin-bottom: 0.625rem;
+          }
+        }
+      }
+      &-text:nth-child(1),
+      &-text:nth-child(3) {
+        position: inherit;
+        right: 0;
+      }
+      &-img {
+        display: none;
+        &--container {
+          @include aspect-ratio(130, 131);
+        }
+        &--mobile {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 100vw;
+          max-height: 60vh;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (width: 375px) and (-webkit-device-pixel-ratio: 2) {
+  .hair {
+    &__wrapper {
+      padding-top: 0.875rem;
+      &-img--container {
+        height: 45vh;
+      }
+
+      &-img--container img {
+        object-fit: cover;
+      }
+    }
+  }
+}

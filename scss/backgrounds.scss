@@ -1,0 +1,195 @@
+#hair-booster-wrap {
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/moss-top.png);
+    top: 0;
+    left: 0;
+    width: 252px;
+    height: 258px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/moss-bottom.png);
+    right: 0;
+    bottom: 0;
+    width: 252px;
+    height: 255px;
+  }
+}
+
+#hydration-product {
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/drop-top.png);
+    top: 50px;
+    left: 0;
+    width: 105px;
+    height: 115px;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/drop-bottom.png);
+    right: 0;
+    bottom: 0;
+    width: 90px;
+    height: 85px;
+  }
+}
+
+#hydration-info {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/drop-block.png);
+    top: -60px;
+    right: 14px;
+    width: 43px;
+    height: 43px;
+  }
+}
+
+#beenergy-product {
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/beenergy-top.png);
+    top: 10px;
+    left: 0;
+    width: 185px;
+    height: 250px;
+    z-index: -1;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/beenergy-bottom.png);
+    right: 0;
+    bottom: 0;
+    width: 293px;
+    height: 374px;
+    z-index: -1;
+  }
+}
+
+#detox-product {
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/detox-top.png);
+    top: 0;
+    left: 0;
+    width: 359px;
+    height: 281px;
+    z-index: -1;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/detox-bottom.png);
+    right: 0;
+    bottom: 0;
+    width: 462px;
+    height: 653px;
+    z-index: -1;
+  }
+}
+
+#goodnight-product {
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url(../img/goodnight-top.png);
+    top: 0;
+    left: 0;
+    width: 207px;
+    height: 251px;
+    z-index: -1;
+  }
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url(../img/goodnight-bottom.png);
+    right: 0;
+    bottom: 0;
+    width: 276px;
+    height: 303px;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 724px) {
+  #hair-booster-wrap {
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url(../img/moss-mobile.png);
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 199px;
+      height: 304px;
+    }
+    &::after {
+      display: none;
+    }
+  }
+  #hydration-product,
+  #beenergy-product,
+  #detox-product,
+  #goodnight-product {
+    &::after {
+      display: none;
+    }
+  }
+  #hydration-product {
+    &::before {
+      background-image: url(../img/hydration-mobile-top.png);
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 64px;
+      height: 96px;
+    }
+  }
+  #beenergy-product {
+    &::before {
+      background-image: url(../img/beenergy-mobile-top.png);
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 106px;
+      height: 173px;
+    }
+  }
+  #detox-product {
+    &::before {
+      background-image: url(../img/detox-mobile-top.png);
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 143px;
+      height: 193px;
+    }
+  }
+  #goodnight-product {
+    &::before {
+      background-image: url(../img/goodnight-mobile-top.png);
+      top: 0;
+      right: 0;
+      left: auto;
+      width: 142px;
+      height: 149px;
+    }
+  }
+
+  #hydration-info {
+    &::before {
+      display: none;
+    }
+  }
+}

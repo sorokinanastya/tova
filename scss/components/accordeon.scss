@@ -1,0 +1,133 @@
+.accordeon {
+  &__item {
+    border-top: 0.0625rem solid #000; 
+    &:last-child {
+      border-bottom: 0.0625rem solid #000;
+    }
+  }
+
+  &__title {
+    font-size: 1.375rem; 
+    padding: 1.875rem 0; 
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    img {
+      transition: transform 0.3s ease;
+      padding-right: 0.5rem;
+    }
+  }
+
+  &__content {
+    max-height: 0;
+
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    &-lists {
+      display: flex;
+    }
+    ul li {
+      list-style: disc;
+      margin-left: 1.25rem; 
+      max-width: 26.25rem; 
+    }
+    &-text {
+      margin-bottom: 1.875rem; 
+    }
+  }
+
+  &__works {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.375rem; 
+    row-gap: 3rem; 
+    margin-bottom: 1.875rem; 
+    &-item {
+      display: flex;
+    }
+
+    &-img {
+      align-self: start;
+      margin-right: 1.25rem; 
+    }
+
+    &-text {
+      font-size: 1.125rem; 
+    }
+  }
+}
+
+.accordeon__item.active .accordeon__title {
+  font-weight: 600;
+}
+.accordeon__item.active .accordeon__title img {
+  transform: rotate(90deg);
+}
+.accordeon__item.active .accordeon__content {
+  max-height: 31.25rem; 
+}
+
+@media (max-width: 91.5625rem) { 
+  .accordeon__title {
+    width: auto;
+    font-size: 1.125rem; 
+  }
+  .accordeon__works-text {
+    font-size: 0.875rem; 
+  }
+  .accordeon__works-img {
+    width: 3rem;
+  }
+}
+
+@media (max-width: 45.25rem) {
+  .accordeon {
+    &__item {
+      padding: 0.9375rem 0 0.3125rem; 
+      z-index: 2;
+      position: relative;
+    }
+    &__title {
+      font-size: 0.875rem; 
+      font-weight: 600;
+      padding: 0;
+    }
+
+    &__content {
+      padding-top: 0.625rem; 
+      &-text {
+        font-size: 0.875rem; 
+        margin-bottom: 0.9375rem; 
+      }
+
+      &-lists ul li {
+        font-size: 0.875rem;
+      }
+    }
+
+    &__works {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 0.9375rem;
+      &-text {
+        font-size: 0.875rem; 
+      }
+      &-img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .accordeon__content-text {
+    font-size: 0.775rem;
+   }
+   .accordeon__works-text {
+    font-size: 0.775rem;
+   }
+   .accordeon__works-img {
+    width: 2rem;
+    height: 2rem;
+   }
+}

@@ -1,0 +1,45 @@
+.contacts {
+    display: none;
+    &__top, &__bottom {
+        display: flex;
+        flex-direction: column;
+        font-size: 2.5vh;
+    }
+    &__top {
+        padding-top: 2rem;
+        p, a {
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__link {
+        color: #000;
+    }
+
+    &__bottom {
+        font-weight: 500;
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@media(max-width: 725px) {
+    .contacts {
+        display: block;
+        height: auto;
+
+        &__bottom {
+            padding-top: 7vh;
+        }
+        &__bottom p:last-child {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .contacts__bottom {
+        padding-top: 4vh;
+    }
+}

@@ -1,0 +1,200 @@
+.body__product {
+  height: 100vh;
+  overflow-y: hidden;
+
+  &-items {
+    padding-top: 4.313vh;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+  }
+  &-toplink,
+  &-toplink--item {
+    display: none;
+  }
+
+  &-toplink--desktop {
+    display: block;
+    position: absolute;
+    right: 0%;
+    font-size: 1rem;
+    color: #bdbdbd;
+    font-style: italic;
+    border-bottom: 1px solid #bdbdbd;
+    z-index: 3;
+    margin-top: -1.4rem;
+  }
+  &-bottlelink {
+    position: relative;
+  }
+  &-img {
+    position: relative;
+    height: 55vh;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: translateY(-1.5625rem);
+      }
+  }
+  &-moss {
+    position: absolute;
+  }
+  &-name {
+    color: #000;
+    font-size: 1.375rem;
+    font-weight: 600;
+    text-align: center;
+    padding-top: .75rem;
+    margin-bottom: 0.75rem;
+
+    span {
+      color: #034c75;
+      font-weight: 500;
+      font-style: italic;
+      text-decoration: underline;
+    }
+  }
+  &-props {
+    list-style: disc;
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+}
+
+#hydration {
+  &::before {
+    content: url(../img/hydration-bottle-bg.png);
+    position: absolute;
+    bottom: 0;
+    margin-left: -155px;
+  }
+}
+#beenergy {
+  &::before {
+    content: url(../img/beenergy-bottle-bg.png);
+    position: absolute;
+    bottom: 0;
+    margin-left: -236px;
+  }
+}
+#detox {
+  &::before {
+    content: url(../img/detox-bottle-bg.png);
+    position: absolute;
+    bottom: 0;
+    margin-left: -178px;
+  }
+
+}
+#detox {
+  &::after {
+    content: url(../img/detox-moss.png);
+    position: absolute;
+    bottom: 0;
+    // right: 0;
+  }
+}
+#goodnight {
+  &::before {
+    content: url(../img/goodnight-bg.png);
+    position: absolute;
+    bottom: 0;
+    margin-left: -215px;
+  }
+}
+@media(max-width: 1465px) {
+  .body__product-toplink--desktop {
+    right: 15%;
+  }
+}
+@media(max-width: 1620px) {
+    .body__product {
+        &-items {
+            padding-top: 1rem;
+        }
+        &-img {
+            height: 55vh;
+        }
+    }
+}
+@media(max-width: 1024px) {
+    .body__product {
+        &-items {
+            flex-direction: column;
+            
+        }
+        &-item {
+            
+            height: 100vh;
+            transition: transform 1s ease;
+            position: relative;
+        }
+        &-toplink {
+            display: block;
+            position: absolute;
+            top: -5%;
+            right: 0;
+            font-size: 1rem;
+            color: #bdbdbd;
+            font-style: italic;
+            border-bottom: 1px solid #bdbdbd;
+          }
+      
+          &-toplink--item {
+            display: block;
+            position: absolute;
+            right: 17%;
+            font-size: 1rem;
+            color: #bdbdbd;
+            font-style: italic;
+            border-bottom: 1px solid #bdbdbd;
+            z-index: 3;
+            margin-top: -1.4rem;
+          }
+          &-toplink--desktop {
+            display: none;
+          }
+          &-bottlelink {
+            overflow-y: clip;
+          }
+    }
+}
+@media(max-width: 725px) {
+    .body__product {
+
+        &-name {
+            font-size: 15px;
+        }
+        &-props {
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .body__product {
+
+        &-img {
+            height: 50vh;
+        }
+    }
+}
+
+@media (min-width: 3200px) {
+  .body__product-img {
+    height: 42vh;
+  }
+}
